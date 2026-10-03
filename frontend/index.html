@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>天宇石材 | 石英石 · 岩板 · 花岗岩台面加工厂</title>
+  <meta name="description" content="天宇石材：石英石、岩板、花岗岩台面加工与安装厂家。选板、量尺、切割、边型、抛光、安装都在自己手里完成，承接渠道批量与工程单，也做终端定制。">
+  <meta name="theme-color" content="#15130f">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2315130f'/%3E%3Crect x='14' y='18' width='36' height='28' rx='3' fill='none' stroke='%23a88a5e' stroke-width='3'/%3E%3Cline x1='14' y1='26' x2='50' y2='26' stroke='%23c7aa7c' stroke-width='2'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+
+  <noscript><style>.loader{display:none}</style></noscript>
+
+  <script defer src="assets/vendor/three.min.js"></script>
+  <script defer src="assets/vendor/gsap.min.js"></script>
+  <script defer src="business.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- 加载动画（三重降级：JS 超时 / JS 兜底 / 纯 CSS） -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__top">
+      <span data-biz="name"></span>
+      <span>加载中</span>
+    </div>
+    <div class="loader__count" id="loader-count" aria-hidden="true">000</div>
+    <span class="loader__bar" id="loader-bar"></span>
+  </div>
+
+  <!-- 顶部导航 -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" data-biz="name" aria-label="返回顶部"></a>
+
+    <nav class="nav__links" aria-label="主导航">
+      <a href="#materials">板材</a>
+      <a href="#experience">工艺</a>
+      <a href="#projects">案例</a>
+      <a href="#news">厂里动态</a>
+      <a class="nav__cta" href="#contact">预约量尺</a>
+    </nav>
+
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">菜单</button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="移动端导航">
+      <a href="#materials">板材</a>
+      <a href="#experience">工艺</a>
+      <a href="#projects">案例</a>
+      <a href="#news">厂里动态</a>
+      <a href="#contact">预约量尺</a>
+    </nav>
+    <div class="menu__meta">
+      <a data-link="tel" data-biz="phone"></a>
+      <span data-biz="address"></span>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- 1. 首屏 -->
+    <section class="hero" id="hero">
+      <div class="hero__wash" aria-hidden="true"></div>
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero__content">
+        <p class="hero__label">石英石 · 岩板 · 花岗岩台面加工厂</p>
+
+        <h1 class="display hero__title">
+          <span class="line"><span class="line__inner">从一块板，</span></span>
+          <span class="line"><span class="line__inner">到一块好台面。</span></span>
+          <span class="line"><span class="line__inner">一个厂做完。</span></span>
+        </h1>
+
+        <div class="hero__lower">
+          <p class="hero__copy">天宇石材做台面加工这一件事：自有加工车间与安装团队，选板、量尺、切割、边型、抛光、安装都在自己手里完成。承接橱柜商、装修公司、建材商户的批量台面与工程单，也做终端定制。</p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#contact">预约量尺</a>
+            <a class="btn btn--ghost" href="#experience">看加工工艺</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__foot">
+        <span data-biz="address"></span>
+        <a class="scroll" href="#materials"><span>往下看</span><i class="scroll__line" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+
+    <!-- 2. 板材 -->
+    <section class="materials" id="materials">
+
+      <h2 class="display materials__title" data-reveal="lines">
+        <span class="line"><span class="line__inner">板材，</span></span>
+        <span class="line"><span class="line__inner">按用途选。</span></span>
+      </h2>
+
+      <article class="material material--marble">
+        <div class="frame" data-reveal="image">
+          <img data-parallax src="assets/slab-quartz.webp" alt="石英石板材样板，浅米色细颗粒质感" loading="lazy" decoding="async">
+        </div>
+        <div class="material__text">
+          <h3 class="display material__name" data-reveal="lines"><span class="line"><span class="line__inner">石英石</span></span></h3>
+          <p class="material__desc" data-reveal="fade">硬度高、耐刮耐污，颗粒细腻，颜色稳定。厨房台面与餐厨一体空间的主流选择。</p>
+        </div>
+      </article>
+
+      <article class="material material--porcelain">
+        <div class="frame" data-reveal="image">
+          <img data-parallax src="assets/slab-sinter.webp" alt="岩板样板，大规格哑光细纹" loading="lazy" decoding="async">
+        </div>
+        <div class="material__text">
+          <h3 class="display material__name" data-reveal="lines"><span class="line"><span class="line__inner">岩板</span></span></h3>
+          <p class="material__desc" data-reveal="fade">大规格、薄板、纹理连贯，哑光与亮面可选。吧台、岛台、餐桌与电视墙皆宜。</p>
+        </div>
+      </article>
+
+      <article class="material material--granite">
+        <div class="frame" data-reveal="image">
+          <img data-parallax src="assets/slab-granite.webp" alt="花岗岩样板，深色晶粒质感" loading="lazy" decoding="async">
+        </div>
+        <div class="material__text">
+          <h3 class="display material__name" data-reveal="lines"><span class="line"><span class="line__inner">花岗岩</span></span></h3>
+          <p class="material__desc" data-reveal="fade">质地坚硬、耐候性强，深浅晶粒纹理各有气质。厨房台面、窗台与户外台面皆可。</p>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- 3. 工艺体验 -->
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <h2 class="sr-only" id="experience-title">选板、量尺、切割、边型、抛光、安装</h2>
+
+      <div class="stage" id="experience-stage">
+        <img class="stage__bg" src="assets/process-waterjet.webp" alt="" loading="lazy" decoding="async">
+        <img class="stage__plate stage__plate--a" src="assets/case-bathroom.webp" alt="" loading="lazy" decoding="async">
+        <img class="stage__plate stage__plate--b" src="assets/slab-granite.webp" alt="" loading="lazy" decoding="async">
+        <div class="stage__dark" aria-hidden="true"></div>
+
+        <div class="stage__words" aria-hidden="true">
+          <div class="display word" data-reveal="lines"><span class="line"><span class="line__inner">选板</span></span></div>
+          <div class="display word" data-reveal="lines" data-delay="0.12"><span class="line"><span class="line__inner">开料</span></span></div>
+          <div class="display word" data-reveal="lines" data-delay="0.24"><span class="line"><span class="line__inner">安装</span></span></div>
+        </div>
+      </div>
+
+      <p class="experience__copy" data-reveal="fade">
+        现场量尺、桥切与水刀开料、边型打磨、抛光，再到上门安装——每一道工序都留在自己厂里，做出来的台面才接得住。
+      </p>
+    </section>
+
+
+    <!-- 4. 案例 -->
+    <section class="projects" id="projects">
+
+      <h2 class="display projects__title" data-reveal="lines">
+        <span class="line"><span class="line__inner">做过的</span></span>
+        <span class="line"><span class="line__inner">台面。</span></span>
+      </h2>
+
+      <article class="project project--one">
+        <div class="frame" data-reveal="image">
+          <img data-parallax src="assets/case-kitchen.webp" alt="厨房台面案例：L 形转角石英石台面，台下盆" loading="lazy" decoding="async">
+        </div>
+        <div class="project__meta" data-reveal="fade">
+          <h3 class="display project__title" data-biz="projects.0.title"></h3>
+          <dl class="spec">
+            <div><dt>场景</dt><dd data-biz="projects.0.type"></dd></div>
+            <div><dt>地区</dt><dd data-biz="projects.0.location"></dd></div>
+            <div><dt>年份</dt><dd data-biz="projects.0.year"></dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project project--two">
+        <div class="frame" data-reveal="image">
+          <img data-parallax src="assets/case-bar.webp" alt="吧台前台案例：大规格岩板一体台面" loading="lazy" decoding="async">
+        </div>
+        <div class="project__meta" data-reveal="fade">
+          <h3 class="display project__title" data-biz="projects.1.title"></h3>
+          <dl class="spec">
+            <div><dt>场景</dt><dd data-biz="projects.1.type"></dd></div>
+            <div><dt>地区</dt><dd data-biz="projects.1.location"></dd></div>
+            <div><dt>年份</dt><dd data-biz="projects.1.year"></dd></div>
+          </dl>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- 5. 工艺数据（真实工序指标，不做营销夸大） -->
+    <section class="stats" aria-label="工艺指标">
+      <div class="stat">
+        <i class="stat__rule" data-reveal="rule"></i>
+        <div class="stat__row">
+          <span class="display stat__value" data-reveal="count" data-biz="stats.accuracy"></span>
+          <p class="stat__label">现场量尺精度（毫米）</p>
+        </div>
+      </div>
+
+      <div class="stat">
+        <i class="stat__rule" data-reveal="rule"></i>
+        <div class="stat__row">
+          <span class="display stat__value" data-reveal="count" data-biz="stats.rpm"></span>
+          <p class="stat__label">桥切水冷切割（转/分）</p>
+        </div>
+      </div>
+
+      <div class="stat">
+        <i class="stat__rule" data-reveal="rule"></i>
+        <div class="stat__row">
+          <span class="display stat__value" data-reveal="count" data-biz="stats.polish"></span>
+          <p class="stat__label">抛光研磨目数（目）</p>
+        </div>
+      </div>
+
+      <div class="stat">
+        <i class="stat__rule" data-reveal="rule"></i>
+        <div class="stat__row">
+          <span class="display stat__value" data-reveal="count" data-biz="stats.install"></span>
+          <p class="stat__label">双人安装典型时长（小时）</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 6. 联系我们 -->
+    <section class="contact" id="contact">
+
+      <h2 class="display contact__title" data-reveal="lines">
+        <span class="line"><span class="line__inner">一块好台面，</span></span>
+        <span class="line"><span class="line__inner">从量尺开始。</span></span>
+      </h2>
+
+      <div class="contact__lower" data-reveal="fade">
+        <form class="quote-form" id="quote-form" novalidate>
+          <p class="quote-form__note">填写后我们尽快与你联系，约一个方便的上门时间；渠道与批量合作，请在留言里说明。带 * 的是必填项。</p>
+          <label class="quote-form__field">
+            <span>称呼 *</span>
+            <input type="text" name="name" placeholder="怎么称呼你（可写公司名称）" autocomplete="name" required>
+          </label>
+          <label class="quote-form__field">
+            <span>手机号 *</span>
+            <input type="tel" name="phone" placeholder="11 位手机号，方便联系" autocomplete="tel" inputmode="numeric" required>
+          </label>
+          <label class="quote-form__field">
+            <span>留言 *</span>
+            <textarea name="message" rows="4" placeholder="台面用在哪、面积或延米数、材料要求；渠道与批量合作请注明大概单量" required></textarea>
+          </label>
+          <button class="btn btn--solid quote-form__submit" type="submit">提交留言</button>
+          <p class="quote-form__status" id="quote-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <address class="contact__details">
+          <a data-link="tel" data-biz="phone"></a><br>
+          <span data-biz="address"></span>
+        </address>
+      </div>
+
+      <section class="announcements" id="news" aria-labelledby="news-title">
+        <h2 class="announcements__title" id="news-title">厂里动态</h2>
+        <ul class="announcements__list" id="announcements-list"></ul>
+      </section>
+
+      <footer class="footer">
+        <span data-biz="name"></span>
+        <span data-biz="tagline"></span>
+        <span>ICP 备案号：示例备案号（占位）</span>
+        <span>© <span data-year></span></span>
+      </footer>
+
+    </section>
+
+  </main>
+
+  <!-- 在线客服浮窗 -->
+  <div class="chat-widget" id="chat-widget">
+    <button class="chat-widget__toggle" id="chat-toggle" type="button" aria-expanded="false" aria-label="在线客服">留言</button>
+    <div class="chat-widget__panel" id="chat-panel" aria-hidden="true">
+      <div class="chat-widget__head">在线留言</div>
+      <div class="chat-widget__body">
+        <div class="chat-widget__hint">厂里客服看到后会尽快回复你。</div>
+        <div class="chat-widget__msgs" id="chat-msgs"></div>
+      </div>
+      <form class="chat-widget__form" id="chat-form">
+        <input type="text" name="content" placeholder="写下你的问题，回车发送" maxlength="200" autocomplete="off">
+        <button type="submit" aria-label="发送">发送</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
